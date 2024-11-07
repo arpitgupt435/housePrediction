@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - housePrediction
+name: Build and deploy Python app to Azure Web App - HOUSEPREDICTION
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D92F34AD68D446A1AB58A9560410C652 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B08668D639D5454BB678E90020B03406 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_104028908642493590883ED1357C175E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C7A775D292BE4A308A9F7C93E2A88664 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CAB95AE0FC4F407EB1B299EE19193968 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B802F785A4BD47DBADAE4E41B8ACF7A2 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'housePrediction'
+          app-name: 'HOUSEPREDICTION'
           slot-name: 'Production'
           
